@@ -3,6 +3,7 @@ package com.rjgc.eycs;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * 软件工程2003陈俊文
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @Slf4j//日志注解
 @SpringBootApplication
+@ServletComponentScan
 public class eycsApplication {
      public static void main(String[] args){
          SpringApplication.run(eycsApplication.class,args);
