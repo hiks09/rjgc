@@ -35,7 +35,7 @@ public class UserController {
             String code= ValidateCodeUtils.generateValidateCode(4).toString();
             log.info("code={}",code);
             //调用阿里云短信服务
-           // SMSUtils.sendMessage("鹅鸭超市","SMS_264900311",phone,code);
+            SMSUtils.sendMessage("鹅鸭超市","SMS_264900311",phone,code);
             //生成验证码存到session
             session.setAttribute(phone,code);
             return  R.success("手机验证码短信发送成功");
