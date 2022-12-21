@@ -9,7 +9,8 @@
   background: url(../images/mainBg.png);
   background-repeat: no-repeat;
   height: 152rem;
-  background-size: contain;
+  background-size:100% 100%;
+
 }
 
 #main .divHead img {
@@ -22,7 +23,7 @@
 
 #main .divTitle {
   width: 345rem;
-  height: 118rem;
+  height: 102rem;
   opacity: 1;
   background: #ffffff;
   border-radius: 6rem;

@@ -3,6 +3,7 @@ package com.rjgc.eycs.config;
 import com.rjgc.eycs.common.JacksonObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.cbor.MappingJackson2CborHttpMessageConverter;
@@ -42,4 +43,24 @@ public class WebMvcConfig  extends WebMvcConfigurationSupport {
         //将上面的消息转换器对象追加到mvc框架的转换器集合中
         converters.add(0,messageConverter);
     }
+
+
+//    @Bean
+//    public Docket createRestApi() {
+//        // 文档类型
+//        return new Docket(DocumentationType.SWAGGER_2)
+//                .apiInfo(apiInfo())
+//                .select()
+//                .apis(RequestHandlerSelectors.basePackage("com.rjgc.eycs.controller"))
+//                .paths(PathSelectors.any())
+//                .build();
+//    }
+//
+//    private ApiInfo apiInfo() {
+//        return new ApiInfoBuilder()
+//                .title("鹅鸭超市")
+//                .version("1.0")
+//                .description("鹅鸭超市接口文档")
+//                .build();
+//    }
 }
